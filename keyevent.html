@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key</title>
+</head>
+<style>
+    *{
+        background-color: rgb(85, 67, 203);
+    }
+    .container{
+        width: 80%;
+
+    }
+    #input{
+        background-color: aliceblue;
+        width: 22rem;
+        height: 2rem;
+        border-radius: 2rem;
+    }
+    #alert{
+        margin: 2rem;
+        padding: 2em;
+        color: aliceblue;
+
+    }
+    p{
+        color: antiquewhite;
+        font-size: larger;
+        font-weight: bold;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <p>What is your Name ?</p>
+        <input type="email" id="input">
+        <div id="alert" >
+        </div>
+    </div>
+    <script>
+        addEventListener("keydown", function() { 
+            // console.log("key down");
+         document.getElementById("alert").innerHTML =`its key is ${event.key} and it's code is ${event.code}`
+
+          });
+          addEventListener("keypress", function() { 
+            // console.log("key press");
+            document.getElementById("alert").innerHTML =`its key is ${event.key} and it's code is ${event.code}`
+          }); 
+             addEventListener("keyup", function() { 
+            // console.log("keyup ");
+            document.getElementById("alert").innerHTML = `its key is ${event.key} and it's code is ${event.code}`
+          });
+        //    document.getElementById('input')= 'input'
+        //     console.log(input);
+    </script>
+</body>
+</html>
